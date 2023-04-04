@@ -8,4 +8,9 @@ on:
         required: true
         type: string
 
-
+jobs:
+  store_number:
+    runs_on: ubuntu_latest
+    steps:
+    - name: Echo number
+      run: echo ${{ inputs.a_number }}
