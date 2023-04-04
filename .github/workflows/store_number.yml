@@ -16,6 +16,8 @@ jobs:
       run: sudo apt-get update && sudo apt-get install jq
     - name: Echo number
       run: echo ${{ inputs.a_number }}
+    - name: Where and what
+      run: pwd && ls
     - name: Show file
       run: jq . data.json
 
