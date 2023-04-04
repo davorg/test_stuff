@@ -12,5 +12,10 @@ jobs:
   store_number:
     runs-on: ubuntu-latest
     steps:
+    - name: Install jq
+      run: apt update && apt install jq
     - name: Echo number
       run: echo ${{ inputs.a_number }}
+    - name: Show file
+      run: jq . data.json
+
