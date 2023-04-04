@@ -25,3 +25,12 @@ jobs:
         mv newdata.json data.json
     - name: Show file again
       run: jq . data.json
+    - name: Commit data file
+      run: |
+        GIT_STATUS=$(git status --porcelain)
+        echo $GIT_STATUS
+        git config user.name github-actions[bot]
+        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+        git add data.json
+        if [ "$GIT_STATUS" != "" ]; then git commit -m "Automated data storage"; fi
+        if [ "$GIT_STATUS" != "" ]; then git push; fi
