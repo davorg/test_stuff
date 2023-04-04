@@ -10,7 +10,7 @@ on:
 
 jobs:
   store_number:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
     steps:
     - name: Echo number
       run: echo ${{ inputs.a_number }}
