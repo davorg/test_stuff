@@ -1,0 +1,11 @@
+name: Store a number
+
+on:
+  workflow_dispatch:
+    inputs:
+      a_number:
+        description: 'A number'
+        required: true
+        type: string
+
+
