@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install jq
-      run: sudo (apt update && apt install jq)
+      run: sudo apt-get update && sudo apt-get install jq
     - name: Echo number
       run: echo ${{ inputs.a_number }}
     - name: Show file
