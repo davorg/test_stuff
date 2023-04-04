@@ -16,10 +16,12 @@ jobs:
       uses: actions/checkout@v3
     - name: Install jq
       run: sudo apt-get update && sudo apt-get install jq
-    - name: Echo number
-      run: echo ${{ inputs.a_number }}
-    - name: Where and what
-      run: pwd && ls
     - name: Show file
       run: jq . data.json
-
+    - name: Add the data
+      run: |
+        DATE=`date`
+        jq --arg DATE "$DATE" '.data += [{ "number" : "2", "date" : $DATE }]' newdata.json
+        mv newdata.json data.json
+    - name: Show file again
+      run: jq . data.json
