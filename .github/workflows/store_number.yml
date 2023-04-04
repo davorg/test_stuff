@@ -20,7 +20,7 @@ jobs:
       run: jq . data.json
     - name: Add the data
       run: |
-        DATE=`date`
+        DATE=`date -Iseconds`
         jq --arg DATE "$DATE" '.data += [{ "number" : "2", "date" : $DATE }]' data.json > newdata.json
         mv newdata.json data.json
     - name: Show file again
