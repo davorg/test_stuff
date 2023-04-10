@@ -1,0 +1,18 @@
+name: Count the rows in a file
+
+on:
+  workflow_dispatch:
+
+jobs:
+  count_rows:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v3
+    - name: Count rows
+      run: |
+        ROWS=`wc -l test.csv`
+    - name: Show count
+      run: |
+        echo ${{ env.ROWS }}
+
