@@ -14,5 +14,5 @@ jobs:
         ROWS=`wc -l test.csv`
     - name: Show count
       run: |
-        echo ${{ env.ROWS }}
+        echo $ROWS
 
