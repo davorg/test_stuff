@@ -14,5 +14,5 @@ jobs:
         echo "ROWS=`wc -l test.csv | cut -d' ' -f1`" >> $GITHUB_ENV
     - name: Show count
       run: |
-        echo $ROWS
+        echo ${{ env.ROWS }}
 
