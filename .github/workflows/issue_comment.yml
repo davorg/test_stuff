@@ -7,7 +7,7 @@ on:
 jobs:
   test:
     name: debug
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
 
     steps:
       - name: print whole context
@@ -17,4 +17,3 @@ jobs:
         run: |
           echo "GITHUB_CONTEXT is $GITHUB_CONTEXT"
           echo "VARS_CONTEXT is $VARS_CONTEXT"
-          echo "edit event is  ${{ GITHUB_CONTEXT.event }} "
