@@ -1,0 +1,20 @@
+name: Test issue comment stuff
+
+on:
+  issue_comment:
+    type: edit
+
+jobs:
+  test:
+    name: debug
+    runs-on: ubuntu
+
+    steps:
+      - name: print whole context
+        env:
+          GITHUB_CONTEXT:  ${{ toJson(github) }} 
+          VARS_CONTEXT:  ${{ toJson(vars) }} 
+        run: |
+          echo "GITHUB_CONTEXT is $GITHUB_CONTEXT"
+          echo "VARS_CONTEXT is $VARS_CONTEXT"
+          echo "edit event is  ${{ GITHUB_CONTEXT.event }} "
