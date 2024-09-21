@@ -5,7 +5,7 @@ on:
 
 jobs:
   test:
-    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-testi-new.yml@main
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-test-new.yml@main
       with:
         test_contexts: "[ 'foo' ]"
 
