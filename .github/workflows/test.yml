@@ -1,0 +1,11 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: PerlToolsTeam/github_workflows/.github/workflows/cpan-testi-new.yml@main
+      with:
+        test_contexts: "[ 'foo' ]"
+
