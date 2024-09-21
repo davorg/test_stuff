@@ -9,5 +9,5 @@ jobs:
     with:
       os: "[ 'ubuntu-latest' ]"
       perl_version: "[ 'latest' ]"
-      testing_contexts: "[ 'foo' ]"
+      testing_contexts: '[ "foo" ]'
 
