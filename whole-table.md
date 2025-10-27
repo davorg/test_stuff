@@ -1,5 +1,5 @@
 |       Name       | bless | Moo | Object::Pad | class |
-| ---------------- | :---: | :---: | :---------: | :---: |
+| ---------------- | :---: | :-: | :---------: | :---: |
 | Abstract Factory |   x   |  x  |      x      |       |
 | Builder          |   x   |  x  |      x      |       |
 | Factory Method   |   x   |  x  |      x      |       |
